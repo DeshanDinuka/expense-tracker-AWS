@@ -1,0 +1,196 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #242424;
+}
+
+/* --- Layouts --- */
+.container-horizontal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}
+
+.container-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Add Expense Form --- */
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.expense-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.expense-form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.expense-form input,
+.expense-form select,
+.filter-controls select {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+/* --- Chart --- */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+}
+.chart-container canvas {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* --- Filter and Total --- */
+.filter-total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.total-expenses h2 {
+  margin: 0;
+  color: #4CAF50; /* Green color for total */
+}
+
+/* --- Expense List --- */
+.expense-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.expense-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #2c2c2c;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.expense-item-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.expense-date { font-size: 0.8rem; color: #999; width: 80px; }
+.expense-desc { font-weight: bold; flex-basis: 150px; flex-grow: 1; }
+.expense-cat { font-style: italic; color: #ccc; flex-basis: 100px; }
+.expense-amt { font-weight: bold; color: #81c784; flex-basis: 80px; text-align: right; }
+
+.expense-item-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* --- Edit Form (inline) --- */
+.edit-form {
+  display: flex;
+  flex-grow: 1;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.edit-form input,
+.edit-form select {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+.edit-form input[name="description"] { flex-grow: 2; min-width: 100px; }
+.edit-form input[name="amount"] { width: 80px; }
+.edit-form input[name="date"] { width: 130px; }
+.edit-form select[name="category"] { flex-grow: 1; min-width: 80px; }
+
+
+/* --- Buttons --- */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+button[type="submit"] {
+  background-color: #4c6cff;
+}
+button[type="submit"]:hover {
+  background-color: #646cff;
+}
+
+.delete-btn {
+  background-color: #7c2d2d;
+  padding: 0.4rem 0.8rem;
+}
+.delete-btn:hover { background-color: #a04040; }
+
+.edit-btn {
+  background-color: #2d5a7c;
+  padding: 0.4rem 0.8rem;
+}
+.edit-btn:hover { background-color: #407ba0; }
